@@ -1,0 +1,233 @@
+/*DESKTOP*/
+@include media-breakpoint-up(lg){
+    .main__topo{
+        width: 100%;
+        max-width: 1170px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+
+        .logo{
+            padding: 30px 0;
+        }
+
+        .menu{
+            display: flex;
+            list-style: none;
+            padding-left: 0;
+            margin-left: auto;
+            margin-bottom: 0;
+
+            li{
+                display: flex;
+                margin: 0 15px;
+                align-items: center;
+            }
+
+            a{
+                display: flex;
+                padding-bottom: 7px;
+                margin: 0;
+                height: 20px;
+                align-items: center;
+                font-family: 'Questrial', sans-serif;
+                color: #232323;
+                font-weight: 500;
+                transition: background .3s linear;
+                position: relative;
+                text-decoration: none;
+
+                &::after{
+                    content: '';
+                    width: 100%;
+                    height: 5px;
+                    background: map-get($cores, amarelo-inova );
+                    position: absolute;
+                    bottom: 0;
+                    transform: scale(0,1);
+                    transition: transform .4s linear;
+                }
+
+               
+            }
+
+            a:hover:after,
+            .active a:after{
+                text-decoration: none;
+                transform: scale(1,1)
+            }
+
+            .active a {
+                background: #FFF;
+                position: relative;
+                &::after{
+                    content: '';
+                    width: 100%;
+                    height: 5px;
+                    background: map-get($cores, amarelo-inova );
+                    position: absolute;
+                    bottom: 0;
+                    transform: scale(1,1);
+                }
+                
+            }
+        }
+        
+        .box__redes__sociais{
+            display: none;
+        }
+    }
+}
+
+@media (max-width:999px){
+    .main__topo{
+        .menu{
+            a{
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+/*MOBILE*/
+@include media-breakpoint-down(md){
+    .main__topo{
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 250px;
+        height: 100%;
+        background: #FFF;
+        z-index: 999;
+        overflow: auto;
+        transform: translateX(-100%);
+
+        .logo{
+            padding: 40px 15px;
+            text-align: center;
+        }
+
+        .menu{
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+
+            a{
+                display: block;
+                padding: 10px 15px;
+                font-family: 'Questrial', sans-serif;
+                color: #232323;
+                font-weight: 600;
+
+                &:hover{
+                    color: #FFF;
+                    background: map-get($cores, azul-inova );
+                    text-decoration: none;
+                }
+            }
+
+            .active a{
+                color: #FFF;
+                background: map-get($cores, azul-inova );
+                text-decoration: none;
+            }
+        }
+
+        .box__redes__sociais{
+            text-align: center;
+            margin-top: 30px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            a{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                width: 40px;
+                height: 40px;
+                border-radius: 40px;
+                background-color: map-get($cores, azul-inova );
+                margin-right: 10px;
+                color: #FFF;
+                
+            }
+
+        }
+    }
+
+    .main__topo.main__topo--shown{
+        animation: showMenu .4s linear forwards;
+    }
+
+    .main__topo.main__topo--hide{
+        animation: hideMenu .4s linear forwards;
+    }
+
+    .backdrop{
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,.8);
+        backdrop-filter: blur(4px);
+        display: none;
+    }
+
+    .backdrop.main__topo--shown{
+        display: block;
+        animation: showBackdrop .4s linear forwards;
+    }
+
+    .backdrop.main__topo--hide{
+        display: block;
+        animation: hideBackdrop .4s linear forwards;
+    }
+}
+
+@keyframes showBackdrop {
+    from {
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes hideBackdrop {
+    to {
+        opacity: 0;
+    }
+
+    from{
+        opacity: 1;
+    }
+}
+
+@keyframes showMenu {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes hideMenu {
+    to {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    from{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,207 @@
+@import '_carousel__filtro';
+@import '_form__depoimentos';
+@import "_carousel__depoimentos";
+
+.cases__depoimentos{
+
+    .container{
+        padding-top: 36px;
+        padding-bottom: 75px;
+
+        .box__items{
+            margin-top: 60px;
+
+
+            .box__item{
+                margin-bottom: 30px;
+            }
+        }
+
+        a{
+            text-decoration:none;
+        }
+        .titulo{
+            color: map-get($cores, azul-inova );
+            font-size: 20px;
+            font-family: 'montserratbold',sans-serif;
+        }
+
+        .descricao{
+            color: #232323;
+            font-size: 14px;
+            font-family: 'montserratregular',sans-serif;
+            text-align: justify;
+        }
+
+        .title__cases{
+            color: map-get($cores, azul-inova );
+            font-size: 36px;
+            font-family: 'montserratextrabold',sans-serif;
+            margin-top: 30px;
+            position: relative;
+            
+            &::after{
+                content: '';
+                width: 800px;
+                height: 5px;
+                background: map-get($cores, azul-inova );
+                position: absolute;
+                bottom: 20%;
+                margin-left: 15px;
+            }
+
+            
+        }
+
+        .line{
+            &::after{
+                content: '';
+                width: 700px;
+                height: 5px;
+                background: map-get($cores, azul-inova );
+                position: absolute;
+                bottom: 20%;
+                margin-left: 15px;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(lg){
+    .cases__depoimentos{
+        .title__cases{
+            &::after{
+                content: '';
+                width: 600px !important;
+                height: 5px;
+                background: map-get($cores, azul-inova );
+                position: absolute;
+                margin-left: 15px;
+            }
+        }
+        
+        .line{
+            &::after{
+                content: '';
+                width: 500px !important;
+                height: 5px;
+                background: map-get($cores, azul-inova );
+                position: absolute;
+                margin-left: 15px;
+            }
+        }
+    }
+}
+
+#imagens-produto{
+	.album{
+		width:100%;
+		text-align: center;
+
+		img{
+			display: inline-block;
+			border:1px solid rgba(#000,0.2);
+			border-radius: 4px;
+		}
+
+		display: flex;
+
+		.owl-ctrls{
+			display: none;
+			padding:5px 10px;
+			align-items:center;
+            
+			&:hover{
+				text-decoration: none;
+				color: #000;
+				background: #ddd;
+			}
+		}
+
+		.owl-carousel{
+			margin:0 10px;
+			flex-grow:1;
+		}
+	}
+
+	@include media-breakpoint-up(lg){
+
+		.image-g{
+			margin-bottom: 15px;
+		}
+	}
+}
+/************************************************************************
+                            MOBILE/TABLET
+************************************************************************/
+@include media-breakpoint-down(md){
+    .cases__depoimentos{
+
+        .title__cases{
+            width: 250px;
+            &::after{
+                content: '';
+                width: 600px !important;
+                height: 5px;
+                background: map-get($cores, azul-inova );
+                position: absolute;
+                bottom: 10% !important;
+                margin-left: 15px;
+            }
+        }
+
+        .line{
+            &::after{
+                content: '';
+                width: 500px !important;
+                height: 5px;
+                background: map-get($cores, azul-inova );
+                position: absolute;
+                bottom: 20%;
+                margin-left: 15px;
+            }
+        }
+
+        .box__items{
+            .box__item{
+                max-width: 350px;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(sm){
+    .cases__depoimentos{
+
+        .title__cases{
+            width: 250px;
+            &::after{
+                content: '';
+                width: 190px !important;
+                height: 5px;
+                background: map-get($cores, azul-inova );
+                position: absolute;
+                bottom: 10% !important;
+                margin-left: 15px;
+            }
+        }
+
+        .line{
+            &::after{
+                content: '';
+                width: 100px !important;
+                height: 5px;
+                background: map-get($cores, azul-inova );
+                position: absolute;
+                bottom: 20%;
+                margin-left: 15px;
+            }
+        }
+
+        .box__items{
+            .box__item{
+                max-width: 350px;
+            }
+        }
+    }
+}

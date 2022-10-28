@@ -1,0 +1,116 @@
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+}
+  
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    max-width: 689px; /* Could be more or less, depending on screen size */
+    height: 516px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+}
+  
+.form__download{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+
+    .form-group{
+        display: flex;
+        justify-content: center;
+        
+    }
+
+    .mt{
+        margin-top: 40px;
+    }
+
+    .form-control{
+        height: 55px;
+        width: 253px;
+        border-radius: 55px;
+        padding-left: 20px;
+        border: none;
+        box-shadow: none;
+        background-color: #dfdfdf;
+
+        &::placeholder{
+            font-size: 14px;
+            color: #232323;
+            font-family: 'Questrial',sans-serif;
+        }
+    }
+
+    .title__form__modal{
+        font-size: 22px;
+        color: map-get($cores, azul-inova );
+        text-align: center;
+        max-width: 550px;
+        font-family: 'poppinsbold',sans-serif;
+    }
+
+    .btn__padrao{
+        margin-top: 20px;
+    }
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    font-size: 20px;
+    font-weight: bold;
+    align-self: flex-end;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: map-get($cores, azul-inova );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5px;
+
+}
+  
+.close:hover,
+.close:focus {
+    color: map-get($cores, amarelo-inova );
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/***********************************************************
+                        MOBILE/TABLET
+************************************************************/
+@include media-breakpoint-down(md){
+    .modal{
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .form__download{
+        margin-top: 20px;
+        .title__form__modal{
+            font-size: 13px;
+        }
+
+        .mt{
+            margin-top: 0;
+        }
+    }
+}

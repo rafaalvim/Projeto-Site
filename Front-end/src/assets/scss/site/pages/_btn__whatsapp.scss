@@ -1,0 +1,24 @@
+.btn__whatsapp {
+    background: #01ab4c;
+    position: fixed;
+    left: 15px;
+    bottom: 15px;
+    color: #fff;
+    z-index: 999;
+    font-size: 40px;
+    box-shadow: 0 0 8px rgb(0 0 0 / 80%);
+
+    .fab {
+        overflow: hidden;
+        text-shadow: 1px 1px #01883c, 1px 1px #01883c, 2px 2px #01883c, 3px 3px #01883c, 4px 4px #01883c, 5px 5px #01883c, 6px 6px #01883c, 7px 7px #01883c, 8px 8px #01883c, 9px 9px #01883c, 10px 10px #01883c, 11px 11px #01883c, 12px 12px #01883c, 13px 13px #01883c, 14px 14px #01883c, 15px 15px #01883c, 16px 16px #01883c, 17px 17px #01883c, 18px 18px #01883c, 19px 19px #01883c, 20px 20px #01883c, 21px 21px #01883c, 22px 22px #01883c, 23px 23px #01883c, 24px 24px #01883c, 25px 25px #01883c, 26px 26px #01883c, 27px 27px #01883c, 28px 28px #01883c, 29px 29px #01883c, 30px 30px #01883c, 31px 31px #01883c, 32px 32px #01883c, 33px 33px #01883c, 34px 34px #01883c, 35px 35px #01883c, 36px 36px #01883c, 37px 37px #01883c, 38px 38px #01883c, 39px 39px #01883c, 40px 40px #01883c;
+    }
+}
+
+.btn__whatsapp, .btn__whatsapp .fab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}

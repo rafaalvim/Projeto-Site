@@ -1,0 +1,33 @@
+/* Ocultando quando desktop */
+@include media-breakpoint-up(lg){
+    .mobile__controls{
+        display: none;
+    }
+}
+
+/* Exibe quando mobile/tablet */
+@include media-breakpoint-down(md){
+    .mobile__controls{
+        display: flex;
+    }
+}
+
+/* Definindo os estilos padrões do .mobile__controls */
+.mobile__controls{
+    justify-content: space-between;
+
+    .logo{
+        align-self: center;
+        margin-left: auto;
+        padding: 10px;
+    }
+
+    .btn{
+        margin-right: 10px;
+        margin-left: auto;
+        border-radius: 0;
+        font-weight: 800;
+        color: map-get($cores, azul-inova );
+    }
+}
+

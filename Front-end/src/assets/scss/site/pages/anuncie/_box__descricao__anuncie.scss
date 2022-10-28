@@ -1,0 +1,27 @@
+.box__decricao__anuncie{
+    margin-top: 140px;
+    
+    .title__descricao__anuncie{
+        color: map-get($cores, azul-inova );
+        font-size: 54px;
+        font-family: 'montserratregular',sans-serif;
+    }
+
+    .descricao__anuncie{
+        font-size: 15px;
+        line-height: 20px;
+        text-align: justify;
+        font-family: 'Questrial',sans-serif;
+    }
+}
+
+/****************************************************************
+                        MOBILE/TABLET
+*****************************************************************/
+@include media-breakpoint-down(md){
+    .box__decricao__anuncie{
+        .title__descricao__anuncie{
+            font-size: 47px;
+        }
+    }
+}

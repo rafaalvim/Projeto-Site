@@ -1,0 +1,10 @@
+@import "_mobile__controls";
+@import "_main__topo";
+
+.topo{
+    position: sticky;
+    background: #FFF;
+    left: 0;
+    top: 0;
+    z-index: 999;
+}

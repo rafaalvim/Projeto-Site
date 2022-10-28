@@ -1,0 +1,20 @@
+.icon{
+	background-image: url('../images/sprites.png');
+	background-repeat:no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+	background-size: 154px 52px;
+
+	&.aspas-inverse{
+		width: 72px;
+		height: 52px;
+		background-position: 0px 0px;
+	}
+
+	&.aspas{
+		width: 72px;
+		height: 52px;
+		background-position: -82px 0px;
+	}
+
+}

@@ -1,0 +1,183 @@
+.box__conectando{
+    padding-top: 120px;
+    position: relative;
+    height: 800px;
+    &::before{
+        content: '';
+		width: 100vw;
+		height: 100%;
+		background: map-get($cores,amarelo-inova);
+		position: absolute;
+		top: 0;
+		z-index: -1;
+        border-top-left-radius: 100px;
+		@include media-breakpoint-up(lg) {
+			left: -8.333%;
+		}
+    }
+
+    .title__conectando{
+        font-size: 38px;
+        color: map-get($cores, azul-inova );
+        font-family: 'montserratextrabold',sans-serif;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .btns__selecao{
+        display: flex;
+        justify-content: space-between;
+        max-width: 495px;
+        margin-bottom: 30px;
+
+        .borda-tracejada1,.borda-tracejada2,
+        .borda-tracejada3,.borda-tracejada4{
+            padding: 10px;
+            width: 105px;
+            height: 105px;
+            border-radius: 105px;
+            border: 2px dashed transparent;
+
+            &:hover{
+                border: 2px dashed map-get($cores, azul-inova );
+
+                .btn__selecao{
+                    background-color: map-get($cores, azul-inova );
+                    color: map-get($cores, amarelo-inova );
+                }
+            }
+        }
+        
+        .btn__selecao{
+            background-color: #fed24c;
+            width: 80px;
+            height: 80px;
+            border-radius: 80px;
+            font-size: 33px;
+            transition: background .3s linear;
+            box-shadow: none;
+        }
+    }
+
+    .box__cards__sobre{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        
+        .card__sobre{
+            position: absolute;
+            .border-r{
+                border-radius: 20px;
+            }
+
+            .descricao__card{
+                max-width: 490px;
+                text-align: center;
+                font-size: 15px;
+                font-family: 'Questrial',sans-serif;
+                margin-top: 30px;
+            }
+        }
+
+        #cardBike, #cardEmpresarial,
+        #cardShopping{
+            display: none;
+        }
+    }
+
+    .d-block{
+        display: block !important;
+    }
+
+    .borda-tracejada1.active{
+        padding: 10px;
+        width: 105px;
+        height: 105px;
+        border-radius: 105px;
+        border: 2px dashed map-get($cores, azul-inova) ;
+        
+        .btn__selecao{
+            background-color: map-get($cores, azul-inova );
+            color: map-get($cores, amarelo-inova );
+        }
+    }
+
+    .borda-tracejada2.active{
+        padding: 10px;
+        width: 105px;
+        height: 105px;
+        border-radius: 105px;
+        border: 2px dashed map-get($cores, azul-inova) ;
+        
+        .btn__selecao{
+            background-color: map-get($cores, azul-inova );
+            color: map-get($cores, amarelo-inova );
+        }
+    }
+
+    .borda-tracejada3.active{
+        padding: 10px;
+        width: 105px;
+        height: 105px;
+        border-radius: 105px;
+        border: 2px dashed map-get($cores, azul-inova) ;
+        
+        .btn__selecao{
+            background-color: map-get($cores, azul-inova );
+            color: map-get($cores, amarelo-inova );
+        }
+    }
+
+    .borda-tracejada4.active{
+        padding: 10px;
+        width: 105px;
+        height: 105px;
+        border-radius: 105px;
+        border: 2px dashed map-get($cores, azul-inova) ;
+        
+        .btn__selecao{
+            background-color: map-get($cores, azul-inova );
+            color: map-get($cores, amarelo-inova );
+        }
+    }
+}
+
+@include media-breakpoint-down(lg){
+    .box__conectando{
+        &::before{
+            
+            @include media-breakpoint-up(lg) {
+                left: -1.333%;
+            }
+        }
+    }
+}
+
+/***********************************************************
+                        MOBILE/TABLET
+************************************************************/
+@include media-breakpoint-down(md){
+    .box__conectando{
+        padding-top: 30px;
+        background-color: map-get($cores, amarelo-inova );
+        height: 1000px;
+        display: flex;
+        flex-direction: column;
+        &::before{
+            display: none;
+        }
+
+        .btns__selecao{
+            align-self: center;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .box__cards__sobre{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}

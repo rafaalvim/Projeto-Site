@@ -1,0 +1,14 @@
+@import '_topo__anuncie';
+@import '_media__kit';
+@import '_box__descricao__anuncie';
+@import "_box__imgs";
+@import "_modal";
+
+.anuncie{
+    overflow: hidden;
+    .container{
+        margin-top: 50px;
+        padding-top: 50px;
+        padding-bottom: 130px;
+    }
+}

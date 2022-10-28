@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<title>Inovaonze</title>
+	<meta charset="utf-8">
+	<meta name="description" content="Site para empresa Inovaonze">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="msapplication-tap-highlight" content="no">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no"><!-- manifest-->
+	<link rel="manifest" href="assets/application/manifest.json">
+	<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png"><!-- add to home screen (ios)-->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-title" content="Inovaonze">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#4b73dd">
+	<link rel="apple-touch-icon" href="assets/application/icon-152x152.png"><!-- add to home screen (chrome)-->
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="application-name" content="Inovaonze">
+	<meta name="theme-color" content="#4b73dd"><!-- Tile icon for Win8 (144x144 + tile color)-->
+	<meta name="msapplication-TileImage" content="assets/application/icon-144x144.png">
+	<meta name="msapplication-TileColor" content="#4b73dd"><!-- ICONS-->
+	<link rel="icon" sizes="72x72" type="image/png" href="assets/application/icon-72x72.png">
+	<link rel="icon" sizes="96x96" type="image/png" href="assets/application/icon-96x96.png">
+	<link rel="icon" sizes="128x128" type="image/png" href="assets/application/icon-128x128.png">
+	<link rel="icon" sizes="144x144" type="image/png" href="assets/application/icon-144x144.png">
+	<link rel="icon" sizes="152x152" type="image/png" href="assets/application/icon-152x152.png">
+	<link rel="icon" sizes="192x192" type="image/png" href="assets/application/icon-192x192.png">
+	<link rel="icon" sizes="384x384" type="image/png" href="assets/application/icon-384x384.png">
+	<link rel="icon" sizes="512x512" type="image/png" href="assets/application/icon-512x512.png"><!-- PRELOADING-->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+	<link rel="preload" as="script" href="assets/js/jquery.min.js">
+	<link rel="preload" as="script" href="assets/js/bootstrap.min.js">
+	<link rel="preload" as="script" href="assets/js/scripts.min.js">
+	<link rel="preload" as="style" href="assets/css/estilos.css"><!-- CSS-->
+	<link rel="stylesheet" href="assets/css/estilos.css">
+</head><!-- colocar no attr [data-path] a url do site para poder fazer o lazyload de scripts sem problemas de rota.-->
+
+<body data-path="http://localhost:9000">
+	<noscript><style>.noscript{position: sticky;top:0;z-index: 1200;background: #D32F2F;color: #FFF;padding: 20px;text-align: center}</style>
+		<div class="noscript">
+			<p class="h1">(&gt;_&lt;) Ops....</p>
+			<p>Seu navegador está com os scripts desabilitados! Para ter uma melhor experiencia com o nosso site, por favor, habiliete-os.</p>
+		</div>
+	</noscript><!--  [if lt IE 10]><style>.ie-message{position: sticky;top: 0;z-index: 1200;background: #FF9800;color: #FFF}</style><div class="ie-message"><p class="h1"><em>Atenção!!!</em></p><p>Seu navegador está desatualizado! Para ter uma melhor experiência com o nosso site, por favor atualize-o para a última versão do Microsoft Edge.</p></div><![endif]-->
+	<div class="loading" id="app">
+		<header class="topo">
+			<div class="mobile__controls">
+				<div class="logo">
+					<a href="index.html">
+						<img 
+							src="assets/images/logo.png" 
+							alt="Inovaonze" 
+							width="224" 
+							height="44" 
+							loading="lazy" 
+							class="img-fluid"
+						>
+					</a>
+				</div> <!--./logo-->
+
+				<button 
+					class="btn" 
+					aria-expanded="false" 
+					aria-label="Mostrar menu" 
+					id="menuToggler"
+				>
+					<i class="fas fa-bars"></i>
+				</button> <!--./menuToggler-->
+
+			</div> <!--./mobile__controls-->
+
+			<nav class="main__topo">
+				<div class="logo">
+					<a href="index.html">
+						<img 
+							src="assets/images/logo.png" 
+							alt="Inovaonze" 
+							width="224" 
+							height="44" 
+							loading="lazy" 
+							class="img-fluid"
+						>
+					</a>
+				</div> <!--./logo-->
+				
+				<ul class="menu">
+					<li>
+						<a href="index.html" aria-label="home">home</a>
+					</li>
+					<li class="active">
+						<a href="sobre.html" aria-label="a inovaonze">a inovaonze</a>
+					</li>
+					<li >
+						<a href="anuncie.html" aria-label="anuncie">anuncie</a>
+					</li>
+					<li >
+						<a href="cases-depoimentos.html" aria-label="cases e depoimentos">cases e depoimentos</a>
+					</li>
+					<li >
+						<a href="blog.html" aria-label="blog">blog</a>
+					</li>
+					<li >
+						<a href="seja-nosso-parceiro.html" aria-label="seja nosso parceiro">seja nosso parceiro</a>
+					</li>
+					<li >
+						<a href="fale-conosco.html" aria-label="fale conosco">fale conosco</a>
+					</li>
+				</ul> <!--./menu-->
+
+				<!--**************************************************************************************************
+												CONTEUDO ABAIXO APARECERA SOMENTE NO main__topo MOBILE
+				******************************************************************************************************-->
+				<div class="box__redes__sociais">
+					<a href="#"  aria-label="Facebook">
+						<i class="fab fa-facebook-f"></i>
+					</a>
+
+					<a href="#" aria-label="Instagram">
+						<i class="fab fa-instagram"></i>
+					</a>
+
+				</div> <!--./box__redes__sociais-->
+
+			</nav> <!--./main__topo-->
+
+			<div class="backdrop"></div>
+
+		</header> <!--./topo-->
+
+		<template>
+			<main class="wrapper sobre">
+                <div class="page-header">
+					<img 
+						src="assets/images/bg-page-header.png" 
+						alt="Background Page Header" 
+						width="1920" 
+						height="461" 
+						loading="lazy" 
+					>
+
+                    <h1>
+                        a inovaonze
+                    </h1>
+                </div> <!--./page-header-->
+
+				<div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 box__descricao">
+                            <h2 class="title__descricao">
+                                <span>tecnologia e comunicacão</span>
+                                aliadas ao seu negócio
+                            </h2>
+
+                            <p class="descricao">
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
+                                sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem 
+                                ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                                 magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea 
+                                 takimata sanctus est Lorem ipsum . Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt 
+                                 ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd 
+                                 gubergren, no sea takimata
+                            </p>
+                        </div> <!--./col-->
+
+                        <div class="col-lg-6 box__img__topo">
+                            <img 
+                                src="http://placehold.it/528x370" 
+                                alt="placehold" 
+                                width="528" 
+                                height="370" 
+                                class="img-fluid content__editable" 
+                                loading="lazy"
+                            >
+                        </div> <!--./col-->
+
+                        <p class="descricao col-lg-12">
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
+                            sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem 
+                            ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+                            magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata 
+                            sanctus est Lorem ipsum . Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et 
+                            dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea 
+                            takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
+                            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos 
+                        </p>
+
+                        <p class="descricao col-lg-12">
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
+                            sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem 
+                            ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+                            magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata 
+                            sanctus est Lorem ipsum . Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et 
+                            dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea 
+                            takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
+                            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos 
+                        </p>
+                        
+                        <div class="col-lg-6 box__img__centro">
+                            <img 
+                                src="http://placehold.it/1248x668" 
+                                alt="placehold" 
+                                width="1248" 
+                                height="668" 
+                                loading="lazy"
+								class="content__editable"
+                                
+                            >
+                        </div> <!--./col-->
+
+                        <div class="col-lg-6 box__descricao">
+                            <h2 class="title__descricao">
+                                Experiências <span>incríveis</span>
+                                para seus futuros clientes
+                            </h2>
+
+                            <p class="descricao">
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
+                                sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem 
+                                ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+                                magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata 
+                                sanctus est Lorem ipsum . Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+                                magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata 
+                                sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut 
+                                labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam 
+                                nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et 
+                                ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur 
+                                sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et 
+                                accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum . Lorem ipsum dolor sit amet, 
+                                consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos 
+                                et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum 
+                                dolor sit amet, consetetur sadipscing elitr, sed diam 
+                            </p>
+                        </div> <!--./col-->
+
+                    </div> <!--./row-->
+
+                    <a href="index.html" class="btn btn__padrao">
+                        voltar
+                    </a>
+
+                </div> <!--./container-->
+
+			</main> <!--./sobre-->
+			
+		</template>
+
+		<footer class="rodape">
+			<img 
+				src="assets/images/logo-rodape.png" 
+				alt="Inovaonze" 
+				width="188" 
+				height="29" 
+				class="img-fluid" 
+				loading='lazy'
+			>
+
+			<div class="box__redes-sociais">
+				<a href="#"  aria-label="Facebook">
+					<i class="fab fa-facebook-f"></i>
+				</a>
+
+				<a href="#" aria-label="Instagram">
+					<i class="fab fa-instagram"></i>
+				</a>
+
+				<a href="#" aria-label="LinkedIn">
+					<i class="fab fa-linkedin-in"></i>
+				</a>
+			</div> <!--./box__redes-sociais-->
+
+			<h2 class="subtitulo__rodape">Siga a InovaOnze nas redes sociais</h2>
+
+			<div class="box__contato">
+				<i class="fas fa-headset"></i>
+				(11)3344-5672
+			</div> <!--./box__contato-->
+
+			<div class="box__contato">
+				<i class="fas fa-envelope"></i>
+				contato@inovaonze.com.br
+			</div> <!--./box__contato-->
+
+			<p class="endereco">Av Lorem Ipsum Dolor Set - 345 - Centro - São Paulo</p>
+
+			<p class="copyright">
+				Inovaonze © copyright 2017 - Todos os direitos reservados. Designed by 
+				<a href="https://www.gv8.com.br/">
+					Agência GV8
+					<img src="assets/images/log-gv8.png" alt="Agência GV8" width="43" height="15" loading="lazy">
+				</a>
+			</p>
+
+		</footer> <!--./rodape-->
+
+		<!--************************************************************
+                                BOTÃO FLUTUANTE DO WHATSAPP
+            - Se o cliente não quiser só comentar ele
+        *****************************************************************-->
+		<a href="#" title="Whatsapp" aria-label="Fale comigo via Whatsapp" target="blank" class="btn__whatsapp">
+			<i class="fa-whatsapp fab"></i>
+		</a>
+
+		<msg-cookies>Utilizamos cookies para personalizar anúncios e melhorar a sua experiência no site. Ao continuar navegando, você concorda com a nossa <a href="politica-de-privacidade.html">Política de Privacidade</a>
+		</msg-cookies>
+	</div>
+	<!--/#app-->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/scripts.min.js"></script>
+</body>
+
+</html>

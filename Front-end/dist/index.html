@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<title>Lorem Ipsum</title>
+	<meta charset="utf-8">
+	<meta name="description" content="Site para empresa Lorem Ipsum">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="msapplication-tap-highlight" content="no">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no"><!-- manifest-->
+	<link rel="manifest" href="assets/application/manifest.json">
+	<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png"><!-- add to home screen (ios)-->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-title" content="Lorem Ipsum">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#4b73dd">
+	<link rel="apple-touch-icon" href="assets/application/icon-152x152.png"><!-- add to home screen (chrome)-->
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="application-name" content="Lorem Ipsum">
+	<meta name="theme-color" content="#4b73dd"><!-- Tile icon for Win8 (144x144 + tile color)-->
+	<meta name="msapplication-TileImage" content="assets/application/icon-144x144.png">
+	<meta name="msapplication-TileColor" content="#4b73dd"><!-- ICONS-->
+	<link rel="icon" sizes="72x72" type="image/png" href="assets/application/icon-72x72.png">
+	<link rel="icon" sizes="96x96" type="image/png" href="assets/application/icon-96x96.png">
+	<link rel="icon" sizes="128x128" type="image/png" href="assets/application/icon-128x128.png">
+	<link rel="icon" sizes="144x144" type="image/png" href="assets/application/icon-144x144.png">
+	<link rel="icon" sizes="152x152" type="image/png" href="assets/application/icon-152x152.png">
+	<link rel="icon" sizes="192x192" type="image/png" href="assets/application/icon-192x192.png">
+	<link rel="icon" sizes="384x384" type="image/png" href="assets/application/icon-384x384.png">
+	<link rel="icon" sizes="512x512" type="image/png" href="assets/application/icon-512x512.png"><!-- PRELOADING-->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+	<link rel="preload" as="script" href="assets/js/jquery.min.js">
+	<link rel="preload" as="script" href="assets/js/bootstrap.min.js">
+	<link rel="preload" as="script" href="assets/js/scripts.min.js">
+	<link rel="preload" as="style" href="assets/css/estilos.css"><!-- CSS-->
+	<link rel="stylesheet" href="assets/css/estilos.css">
+</head><!-- colocar no attr [data-path] a url do site para poder fazer o lazyload de scripts sem problemas de rota.-->
+
+<body data-path="http://localhost:9000">
+	<noscript><style>.noscript{position: sticky;top:0;z-index: 1200;background: #D32F2F;color: #FFF;padding: 20px;text-align: center}</style>
+		<div class="noscript">
+			<p class="h1">(&gt;_&lt;) Ops....</p>
+			<p>Seu navegador está com os scripts desabilitados! Para ter uma melhor experiencia com o nosso site, por favor, habiliete-os.</p>
+		</div>
+	</noscript><!--  [if lt IE 10]><style>.ie-message{position: sticky;top: 0;z-index: 1200;background: #FF9800;color: #FFF}</style><div class="ie-message"><p class="h1"><em>Atenção!!!</em></p><p>Seu navegador está desatualizado! Para ter uma melhor experiência com o nosso site, por favor atualize-o para a última versão do Microsoft Edge.</p></div><![endif]-->
+	<div class="loading" id="app">
+		<header class="topo">
+			<div class="mobile__controls">
+				<div class="logo">
+					<a href="index.html">
+						<img 
+							src="assets/images/logo.png" 
+							alt="Lorem Ipsum" 
+							width="224" 
+							height="44" 
+							loading="lazy" 
+							class="img-fluid"
+						>
+					</a>
+				</div> <!--./logo-->
+
+				<button 
+					class="btn" 
+					aria-expanded="false" 
+					aria-label="Mostrar menu" 
+					id="menuToggler"
+				>
+					<i class="fas fa-bars"></i>
+				</button> <!--./menuToggler-->
+
+			</div> <!--./mobile__controls-->
+
+			<nav class="main__topo">
+				<div class="logo">
+					<a href="index.html">
+						<img 
+							src="assets/images/logo.png" 
+							alt="Lorem Ipsum" 
+							width="224" 
+							height="44" 
+							loading="lazy" 
+							class="img-fluid"
+						>
+					</a>
+				</div> <!--./logo-->
+				
+				<ul class="menu">
+					<li class="active">
+						<a href="index.html" aria-label="home">home</a>
+					</li>
+					<li >
+						<a href="sobre.html" aria-label="a Lorem Ipsum">a Lorem Ipsum</a>
+					</li>
+					<li >
+						<a href="anuncie.html" aria-label="anuncie">anuncie</a>
+					</li>
+					<li >
+						<a href="cases-depoimentos.html" aria-label="cases e depoimentos">cases e depoimentos</a>
+					</li>
+					<li >
+						<a href="blog.html" aria-label="blog">blog</a>
+					</li>
+					<li >
+						<a href="seja-nosso-parceiro.html" aria-label="seja nosso parceiro">seja nosso parceiro</a>
+					</li>
+					<li >
+						<a href="fale-conosco.html" aria-label="fale conosco">fale conosco</a>
+					</li>
+				</ul> <!--./menu-->
+
+				<!--**************************************************************************************************
+												CONTEUDO ABAIXO APARECERA SOMENTE NO main__topo MOBILE
+				******************************************************************************************************-->
+				<div class="box__redes__sociais">
+					<a href="#"  aria-label="Facebook">
+						<i class="fab fa-facebook-f"></i>
+					</a>
+
+					<a href="#" aria-label="Instagram">
+						<i class="fab fa-instagram"></i>
+					</a>
+
+				</div> <!--./box__redes__sociais-->
+
+			</nav> <!--./main__topo-->
+
+			<div class="backdrop"></div>
+
+		</header> <!--./topo-->
+
+		<template>
+			<main class="wrapper home">
+				<section class="banner">
+					<div id="carouselExampleIndicators" class="carousel slide" data-rhide="carousel">
+						<ol class="carousel-indicators">
+							<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+							<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+							<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+							<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+							<li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+
+							<div class="box__redes__sociais__carousel">
+								<a href="#" aria-label="Facebook">
+									<i class="fab fa-facebook-f"></i>
+								</a>
+	
+								<a href="#" aria-label="Instagram">
+									<i class="fab fa-instagram"></i>
+								</a>
+							</div> <!--./box__redes__sociais__carousel-->
+
+						</ol> <!--./carousel-indicators-->
+						
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img 
+									src="assets/images/banner-carousel.png"  
+									alt="banner Lorem Ipsum" 
+									width="1920" 
+									height="912" 
+									loading="lazy" 
+									class="img-fluid"
+								>
+
+								<a href="sobre.html" class="btn btn__padrao">
+									saiba mas
+								</a>
+							</div> <!--./carousel-item-->
+
+							<div class="carousel-item">
+								<img 
+									src="https://via.placeholder.com/1920x912"  
+									alt="banner Lorem Ipsum" 
+									width="1920" 
+									height="912" 
+									loading="lazy" 
+									class="img-fluid"
+								>
+							</div> <!--./carousel-item-->
+
+							<div class="carousel-item">
+								<img 
+									src="https://via.placeholder.com/1920x912"  
+									alt="banner Lorem Ipsum" 
+									width="1920" 
+									height="912" 
+									loading="lazy" 
+									class="img-fluid"
+								>
+							</div> <!--./carousel-item-->
+
+							<div class="carousel-item">
+								<img 
+									src="https://via.placeholder.com/1920x912"  
+									alt="banner Lorem Ipsum" 
+									width="1920" 
+									height="912" 
+									loading="lazy" 
+									class="img-fluid"
+								>
+							</div> <!--./carousel-item-->
+
+							<div class="carousel-item">
+								<img 
+									src="https://via.placeholder.com/1920x912"  
+									alt="banner Lorem Ipsum" 
+									width="1920" 
+									height="912" 
+									loading="lazy" 
+									class="img-fluid"
+								>
+							</div> <!--./carousel-item-->
+
+						</div> <!--./carousel-inner-->
+						
+					</div> <!--./carousel-->
+
+				</section> <!--./banner-->
+
+				<section class="secao__sobre">
+					<div class="container">
+						<div class="topo__secao__sobre">
+							<h2 class="title__secao__sobre" data-animation="bottom">
+								<span>tecnologia e comunicação</span> <br>
+								aliadas ao seu negócio
+							</h2>
+
+							<p class="descricao__secao__sobre" data-animation="bottom">
+								Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
+								tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+								At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd 
+								gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem 
+								ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+								 tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+								 At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd 
+								 gubergren, no sea takimata sanctus est Lorem ipsum .
+							</p>
+						</div> <!--./topo__secao__sobre-->
+
+						<div class="row box__principal__secao__sobre">
+							<div class="col-lg-6 box__sobre" data-animation="bottom">
+								<h2 class="title__sobre" >
+									sua empresa visível 24h por dia
+									para milhões de pessoas
+								</h2>
+
+								<p class="descricao__sobre">
+									Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
+									tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At 
+									vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
+									no sea takimata sanctus est Lorem ipsum dolor sit amet. 
+								</p>
+
+								<h2 class="title__sobre">
+									porque investir em <br>
+									propaganda OOH?
+								</h2>
+
+								<p class="descricao__sobre">
+									Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
+									tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At 
+									vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
+									no sea takimata sanctus est Lorem ipsum dolor sit amet. 
+								</p>
+							</div> <!--./col-->
+
+							<div class="col-lg-6 box__conectando" data-animation="bottom">
+								<h2 class="title__conectando" >
+									conectando pessoas <br> de uma maneira inovadora
+								</h2>
+
+								<div class="btns__selecao">
+									<div class="borda-tracejada1 active">
+										<button type="button" class="btn btn__selecao" aria-label="Mostrar conteudo" id="transporte">
+											<img src="https://via.placeholder.com/80x80" alt="icone" width="80" height="80" loading="lazy" class="img-fluid">
+										</button>
+									</div>
+
+									<div class="borda-tracejada2">
+										<button type="button" class="btn btn__selecao" aria-label="Mostrar conteudo" id="bike">
+											<img src="https://via.placeholder.com/80x80" alt="icone" width="80" height="80" loading="lazy" class="img-fluid">
+										</button>
+									</div>
+
+									<div class="borda-tracejada3">
+										<button type="button" class="btn btn__selecao" aria-label="Mostrar conteudo" id="edificioEmpresarial">
+											<img src="https://via.placeholder.com/80x80" alt="icone" width="80" height="80" loading="lazy" class="img-fluid">
+										</button>
+									</div>
+
+									<div class="borda-tracejada4">
+										<button type="button" class="btn btn__selecao" aria-label="Mostrar conteudo" id="shopping">
+											<img src="https://via.placeholder.com/80x80" alt="icone" width="80" height="80" loading="lazy" class="img-fluid">
+										</button>
+									</div>
+								</div>
+
+								<div class="box__cards__sobre">
+									<div class="card__sobre" id="cardTransporte">
+										<img 
+											src="https://via.placeholder.com/497x198" 
+											alt="placehold" 
+											width="497" 
+											height="198" 
+											loading="lazy" 
+											class="img-fluid border-r" 
+										>
+
+										<p class="descricao__card">
+											Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+											magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
+											no sea takimata sanctus est Lorem ipsum dolor sit amet  sed diam voluptua. 
+										</p>
+
+									</div> <!--./card__sobre-->
+
+									<div class="card__sobre" id="cardBike">
+										<img 
+											src="assets/images/img-bike-sobre.png" 
+											alt="banne bike" 
+											width="497" 
+											height="198" 
+											loading="lazy" 
+											class="img-fluid border-r" 
+										>
+
+										<p class="descricao__card">
+											Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+											magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
+											no sea takimata sanctus est Lorem ipsum dolor sit amet  sed diam voluptua. 
+										</p>
+
+									</div> <!--./card__sobre-->
+
+									<div class="card__sobre" id="cardEmpresarial">
+										<img 
+											src="https://via.placeholder.com/497x198" 
+											alt="placehold" 
+											width="497" 
+											height="198" 
+											loading="lazy" 
+											class="img-fluid border-r" 
+										>
+
+										<p class="descricao__card">
+											Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+											magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
+											no sea takimata sanctus est Lorem ipsum dolor sit amet  sed diam voluptua. 
+										</p>
+
+									</div> <!--./card__sobre-->
+
+									<div class="card__sobre" id="cardShopping">
+										<img 
+											src="https://via.placeholder.com/497x198" 
+											alt="placehold" 
+											width="497" 
+											height="198" 
+											loading="lazy" 
+											class="img-fluid border-r" 
+										>
+
+										<p class="descricao__card">
+											Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+											magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
+											no sea takimata sanctus est Lorem ipsum dolor sit amet  sed diam voluptua. 
+										</p>
+
+									</div> <!--./card__sobre-->
+
+								</div> <!--./box__cards__sobre-->
+
+							</div> <!--./col-->
+
+						</div> <!--./row-->
+
+					</div> <!--./container-->
+
+				</section> <!--./secao__sobre-->
+
+				<section class="secao__ongs">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-6" data-animation="bottom">
+								<img 
+									src="assets/images/bus-image.png" 
+									alt="Ônibus" 
+									width="515" 
+									height="471" 
+									loading="lazy" 
+									class="img-fluid"
+								>
+							</div> <!--./col-->
+
+							<div class="col-lg-6" data-animation="bottom">
+								<h2 class="title__secao__ongs" >
+									ONGs podem anunciar <br>
+									de forma gratuita conosco!
+								</h2>
+
+								<p class="descricao__secao__ongs">
+									Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
+									tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+									At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
+									no sea takimata sanctus est Lorem ipsum dolor sit amet.
+								</p>
+
+								<a href="fale-conosco.html" class="btn btn__padrao" aria-label="Fale conosco">
+									fale conosco
+								</a>
+
+							</div> <!--./col-->
+
+						</div> <!--./row-->
+						
+					</div> <!--./container-->
+
+				</section> <!--./secao__ongs-->
+
+				<section class="secao__anuncie">
+					<div class="container">
+						<h2 class="title__form" data-animation="bottom">
+							anuncie conosco
+						</h2>
+						<form action="POST" class="row form__anuncie" data-animation="bottom">
+							<form-group class="col-lg-3 pl" input type="text" name="anuncie['nome']" id="anuncie-nome" placeholder="seu nome:" label="seu nome:" sr-only aria-hidden="true" ></form-group>
+							<form-group  class="col-lg-3"input type="email" name="anuncie['email']" id="anuncie-email" placeholder="e-mail:" label="e-mail:"  sr-only aria-hidden="true"></form-group>
+							<form-group class="col-lg-3" input type="tel" name="anuncie['telefone']" id="anuncie-telefone" placeholder="telefone:" label="telefone:" sr-only aria-hidden="true"></form-group>
+							<form-group class="col-lg-3 pr" input type="text" name="anuncie['assunto']" id="anuncie-assunto" placeholder="assunto:" label="assunto:" sr-only aria-hidden="true"></form-group>
+							<form-group class="col-lg-12" textarea  name="anuncie['mensagem']" id="anuncie-mensagem" placeholder="mensagem:" label="mensagem:" sr-only aria-hidden="true"></form-group>
+		
+							<button type="submit" class="btn btn__enviar" aria-label="Enviar">
+								<i class="fas fa-paper-plane"></i>
+							</button>
+
+						</form> <!--./form-->
+						
+					</div> <!--./container-->
+
+				</section> <!--./secao__anuncie-->
+			</main>
+			<!--/main.wrapper-->
+		</template>
+
+		<footer class="rodape" data-animation="bottom" >
+			<img 
+				src="assets/images/logo-rodape.png" 
+				alt="Lorem Ipsum" 
+				width="188" 
+				height="29" 
+				class="img-fluid" 
+				loading='lazy'
+				data-animation="bottom"
+			>
+
+			<div class="box__redes-sociais" data-animation="bottom">
+				<a href="#"  aria-label="Facebook">
+					<i class="fab fa-facebook-f"></i>
+				</a>
+
+				<a href="#" aria-label="Instagram">
+					<i class="fab fa-instagram"></i>
+				</a>
+
+				<a href="#" aria-label="LinkedIn">
+					<i class="fab fa-linkedin-in"></i>
+				</a>
+			</div> <!--./box__redes-sociais-->
+
+			<h2 class="subtitulo__rodape">Siga o Lorem Ipsum nas redes sociais</h2>
+
+			<div class="box__contato">
+				<i class="fas fa-headset"></i>
+				(00)0000-0000
+			</div> <!--./box__contato-->
+
+			<div class="box__contato">
+				<i class="fas fa-envelope"></i>
+				contato@loremipsum.com.br
+			</div> <!--./box__contato-->
+
+			<p class="endereco">Av Lorem Ipsum Dolor Set - 345 - Centro - São Paulo</p>
+
+		</footer> <!--./rodape-->
+
+		
+
+		<msg-cookies>Utilizamos cookies para personalizar anúncios e melhorar a sua experiência no site. Ao continuar navegando, você concorda com a nossa <a href="politica-de-privacidade.html">Política de Privacidade</a>
+		</msg-cookies>
+	</div>
+	<!--/#app-->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/scripts.min.js"></script>
+</body>
+
+</html>

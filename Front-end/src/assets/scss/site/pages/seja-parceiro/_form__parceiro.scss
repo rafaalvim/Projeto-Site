@@ -1,0 +1,68 @@
+.form__parceiro{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    .form-control{
+        border-radius: 55px;
+        padding-left: 20px;
+        border: none;
+        box-shadow: none;
+        background: #dfdfdf;
+        &::placeholder{
+            font-size: 14px;
+            color: #232323;
+            font-family: 'Questrial',sans-serif;
+        }
+
+        
+    }
+
+    input{
+        height: 55px;
+        width: 253px;
+    }
+
+    textarea{
+        width: 100%;
+        height: 86px;
+        padding-top: 20px;
+        border-radius: 20px !important;
+    }
+
+}
+
+@include media-breakpoint-down(lg){
+    .form__parceiro{
+        input{
+            max-width: 220px;
+        }
+    }
+}
+
+
+/********************************************************
+                        MOBILE/TABLET   
+*********************************************************/
+@include media-breakpoint-down(md){
+    .form__parceiro{
+        display: flex;
+        align-items: center;
+        
+        .btn__padrao{
+            margin-left: 20px;
+        }
+
+        textarea{
+            width: 253px;
+        }
+
+        .form-group{
+            max-width: 253px;
+            margin-left: 10px;
+        }
+
+        .form-control{
+            max-height: 253px;
+        }
+    }
+}

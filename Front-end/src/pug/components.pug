@@ -1,0 +1,333 @@
+doctype html
+html(lang="pt-br")
+	head
+		block title
+			-var title = '$projectName';
+		//- block title
+
+		block theme
+			-var $theme = '#C219E9';
+		//- block $theme
+
+		title #{title}
+
+		meta(charset="utf-8")
+
+		meta(name="description" content=`Descrição do projeto ${title}`)
+
+		meta(http-equiv="x-ua-compatible", content="ie=edge")
+		meta(name="msapplication-tap-highlight" content="no")
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+		meta(name="format-detection" content="telephone=no")
+
+		// manifest
+		link(rel="manifest" href="assets/application/manifest.json")
+
+		link(rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico")
+
+		// add to home screen (ios)
+		meta(name="apple-mobile-web-app-capable" content="yes")
+		meta(name="apple-mobile-web-app-title" content=title)
+		meta(name="apple-mobile-web-app-status-bar-style" content=$theme)
+		link(rel="apple-touch-icon" href="assets/application/icon-152x152.png")
+
+		// add to home screen (chrome)
+		meta(name="mobile-web-app-capable" content="yes")
+		meta(name="application-name" content=title)
+		meta(name="theme-color" content=$theme)
+
+		// Tile icon for Win8 (144x144 + tile color)
+		meta(name="msapplication-TileImage" content="assets/application/icon-144x144.png")
+		meta(name="msapplication-TileColor" content=$theme)
+
+		// PRELOADING
+		link(rel="preload" as="script" href="assets/js/jquery.min.js")
+		link(rel="preload" as="script" href="assets/js/bootstrap.min.js")
+		link(rel="preload" as="script" href="assets/js/scripts.min.js")
+
+		link(rel="preload" as="style" href="assets/css/estilos.css")
+
+		// CSS
+		link(rel="stylesheet" href="assets/css/estilos.css")
+	//- head
+	// colocar no attr [data-path] a url do site para poder fazer o lazyload de scripts sem problemas de rota.
+	body
+		include mixins/mixins.pug
+
+		noscript
+			style .noscript{position: sticky;top:0;z-index: 1200;background: #D32F2F;color: #FFF;padding: 20px;text-align: center}
+			.noscript
+				p.h1 (&gt;_&lt;) Ops....
+				p Seu navegador está com os scripts desabilitados! Para ter uma melhor experiencia com o nosso site, por favor, habiliete-os.
+			//- .noscript
+		//- noscript
+
+		//  [if lt IE 10]><style>.ie-message{position: sticky;top: 0;z-index: 1200;background: #FF9800;color: #FFF}</style><div class="ie-message"><p class="h1"><em>Atenção!!!</em></p><p>Seu navegador está desatualizado! Para ter uma melhor experiência com o nosso site, por favor atualize-o para a última versão do Microsoft Edge.</p></div><![endif]
+		style pre{padding:1rem;background: #222;color: #FFF;border:1px solid rgba(0,0,0,.2)}
+		#app.loading
+			main.wrapper.container
+				h1.text-center.mg-5 Esta Página é apenas ilustrativa para mostrar o componenets #[b.text-success Vue] registrados
+				hr
+
+				section#form-group
+					h2.mb-4 # Form Group
+					p Para o #[span.text-danger &lt;form-group&gt;] existe as seguinte variantes:
+					ol
+						li: span.text-danger &lt;form-group #[span.text-success input] &gt; #[span.text-muted // Imprime &lt;input&gt;]
+						li: span.text-danger &lt;form-group #[span.text-success file] &gt; #[span.text-muted // Imprime &lt;input type="file"&gt; custom]
+						li: span.text-danger &lt;form-group #[span.text-success radio] &gt; #[span.text-muted // Imprime uma lista de &lt;input type="radio"&gt;]
+						li: span.text-danger &lt;form-group #[span.text-success checkbox] &gt; #[span.text-muted // Imprime uma lista de &lt;input type="checkbox"&gt;]
+						li: span.text-danger &lt;form-group #[span.text-success textarea] &gt; #[span.text-muted // Imprime &lt;textarea&gt;]
+						li: span.text-danger &lt;form-group #[span.text-success select] &gt; #[span.text-muted // Imprime &lt;v-select&gt;]
+					form-group(
+						input
+						type="text"
+						name='formGroupInput'
+						id='formGroupInput'
+						label="Exemplo Input"
+						placeholder="Placeholder Text"
+					)
+
+					pre.
+						#[span.text-danger &lt;form-group]
+						#[span.text-success  input]
+						#[span.text-success  type=]#[span.text-warning "text|date|email|tel"]
+						<span class="text-success"> name=</span><span class="text-warning">"formGroupInput"</span>
+						<span class="text-success"> id=</span><span class="text-warning">"formGroupInput"</span>
+						#[span.text-success  placeholder=]#[span.text-warning "Placeholder text"]
+						#[span.text-success  label=]#[span.text-warning "Label Text"]
+						#[span.text-danger &gt;]#[span.text-danger &lt;/form-group&gt;]
+						<span class="text-muted">&lt;!--
+						  Caso queira add a classe 'sr-only' à label, basta add o attr [sr-only], isso funciona para todos os &lt;form-group&gt;
+							&lt;form-group
+							  input
+							  type="date"
+							  label="Data de nascimento"
+							  id="dataNascimento"
+							  name="dataNascimento"
+							  sr-only
+							&gt;&lt/form-group&gt;
+						--&gt;</span>
+					form-group(
+						file
+						name='formGroupFile'
+						id='formGroupFile'
+						label="Exemplo Input File"
+					)
+
+					pre.
+						#[span.text-danger &lt;form-group]
+						#[span.text-success  file]
+						<span class="text-success"> name=</span><span class="text-warning">"formGroupFile"</span>
+						<span class="text-success"> id=</span><span class="text-warning">"formGroupFile"</span>
+						#[span.text-success  label=]#[span.text-warning "Label Text"]
+						#[span.text-danger &gt;]#[span.text-danger &lt;/form-group&gt;]
+
+					form-group(
+						radio
+						name='formGroupRadio'
+						label="Exemplo Radio List"
+						:radios=`[
+							{id: 'formGroupRadio-radio-1', text: 'Radio 1', value: 'Radio 1', checked: true},
+							{id: 'formGroupRadio-radio-2', text: 'Radio 2', value: 'Radio 2'},
+							{id: 'formGroupRadio-radio-3', text: 'Radio 3', value: 'Radio 3'},
+						]`
+					)
+
+					pre.
+						#[span.text-danger &lt;form-group]
+						#[span.text-success  radio]
+						<span class="text-success"> name=</span><span class="text-warning">"formGroupRadioList"</span>
+						#[span.text-success  label=]#[span.text-warning "Label Text"]
+						<span class="text-success"> radios=</span><span class="text-warning">"[
+							{id: 'formGroupRadio-radio-1', text: 'Radio 1', value: 'Radio 1', checked: true},
+							{id: 'formGroupRadio-radio-2', text: 'Radio 2', value: 'Radio 2'},
+							{id: 'formGroupRadio-radio-3', text: 'Radio 3', value: 'Radio 3'},
+						]"</span>
+						#[span.text-danger &gt;]#[span.text-danger &lt;/form-group&gt;]
+						<span class="text-muted">&lt;!--
+						  Caso queira deixar os radios inline, add o attr [radio-inline] como no exemplo abaixo:
+						  &lt;form-group
+						  	radio
+						  	radio-inline
+							name="$name"
+							label="Label Text"
+						  &gt;&lt;/form-group&gt;
+						--&gt;</span>
+
+					form-group(
+						checkbox
+						name='formGroupCheckbox'
+						label="Exemplo Checkbox List"
+						:checkboxes=`[
+							{id: 'formGroupCheckbox-checkbox-1', text: 'Checkbox 1', value: 'Checkbox 1', checked: true},
+							{id: 'formGroupCheckbox-checkbox-2', text: 'Checkbox 2', value: 'Checkbox 2'},
+							{id: 'formGroupCheckbox-checkbox-3', text: 'Checkbox 3', value: 'Checkbox 3'},
+						]`
+					)
+
+					pre.
+						#[span.text-danger &lt;form-group]
+						#[span.text-success  checkbox]
+						<span class="text-success"> name=</span><span class="text-warning">"formGroupCheckboxList"</span>
+						#[span.text-success  label=]#[span.text-warning "Label Text"]
+						<span class="text-success"> chekboxes=</span><span class="text-warning">"[
+							{id: 'formGroupCheckbox-checkbox-1', text: 'Checkbox 1', value: 'Checkbox 1', checked: true},
+							{id: 'formGroupCheckbox-checkbox-2', text: 'Checkbox 2', value: 'Checkbox 2'},
+							{id: 'formGroupCheckbox-checkbox-3', text: 'Checkbox 3', value: 'Checkbox 3'},
+						]"</span>
+						#[span.text-danger &gt;]#[span.text-danger &lt;/form-group&gt;]
+						<span class="text-muted">&lt;!--
+						  Caso queira deixar os checkbox inline, add o attr [checkbox-inline] como no exemplo abaixo:
+						  &lt;form-group
+						  	checkbox
+						  	checkbox-inline
+							name="$name"
+							label="Label Text"
+						  &gt;&lt;/form-group&gt;
+						--&gt;</span>
+
+					form-group(
+						textarea
+						name='formGroupTextarea'
+						id='formGroupTextarea'
+						label="Exemplo Textarea"
+						placeholder="Placeholder Text"
+					)
+					pre.
+						#[span.text-danger &lt;form-group]
+						#[span.text-success  textarea]
+						<span class="text-success"> name=</span><span class="text-warning">"formGroupTextarea"</span>
+						<span class="text-success"> id=</span><span class="text-warning">"formGroupTextarea"</span>
+						#[span.text-success  label=]#[span.text-warning "Label Text"]
+						#[span.text-success  placeholder=]#[span.text-warning "Placeholder Text"]
+						#[span.text-danger &gt;]#[span.text-danger &lt;/form-group&gt;]
+
+					form-group(
+						select
+						name='formGroupSelect'
+						id='formGroupSelect'
+						label="Exemplo Select"
+						placeholder="Selecione:"
+						:options=`[
+							{id: 'formGroupSelect-option-1', text: 'Option 1', value: 'Option 1'},
+							{id: 'formGroupSelect-option-2', text: 'Option 2', value: 'Option 2'},
+							{id: 'formGroupSelect-option-3', text: 'Option 3', value: 'Option 3'},
+						]`
+					)
+					pre.
+						#[span.text-danger &lt;form-group]
+						#[span.text-success  select]
+						<span class="text-success"> name=</span><span class="text-warning">"formGroupSelect"</span>
+						<span class="text-success"> id=</span><span class="text-warning">"formGroupSelect"</span>
+						#[span.text-success  label=]#[span.text-warning "Label Text"]
+						#[span.text-success  placeholder=]#[span.text-warning "Placeholder Text"]
+						<span class="text-success"> :options=</span><span class="text-warning">"[
+							{id: 'formGroupSelect-option-1', text: 'Option 1', value: 'Option 1'},
+							{id: 'formGroupSelect-option-2', text: 'Option 2', value: 'Option 2'},
+							{id: 'formGroupSelect-option-3', text: 'Option 3', value: 'Option 3'}
+						]"</span>
+						#[span.text-danger &gt;]#[span.text-danger &lt;/form-group&gt;]
+
+					h3#validacao Mensagens de validação:
+					p Para todos os #[span.text-danger &ltform-group&gt;], você possue os seguintes métodos abaixo:
+
+					pre.
+						<span class="text-muted">// Emitindo mensagens de alerta:</span>
+						<span class="text-primary">window</span>.$emit(<span class="text-warning">'emit.form.validation'</span>, {
+							id: <span class="text-warning">'formGroupInput'</span>,<span class="text-muted">// ID do &lt;form-group&gt;</span>
+							type: <span class="text-warning">'success'</span>,<span class="text-muted">// [succes|warning|danger]</span>
+							message: <span class="text-warning">'&lt;i class="fas fa-thumbs-up"&gt;&lt/i&gt; Sucesso!'</span>
+						})
+
+						<span class="text-muted">// Apagando mensagens de alerta:</span>
+						<span class="text-primary">window</span>.$emit(<span class="text-warning">'clear.form.validation'</span>, {
+							id: <span class="text-warning">'formGroupInput'</span><span class="text-muted">// ID do &lt;form-group&gt;</span>
+						})
+					//- pre.
+
+					hr
+				//- section
+
+				section
+					h2.mb-4 Paginação
+					+paginacao
+					pre.
+						#[span.text-danger &lt;paginacao&gt;]
+							#[span.text-danger &lt;page-item] #[span.text-success href=]#[span.text-warning "#"] #[span.text-success active]#[span.text-danger &gt;]1#[span.text-danger &lt;/page-item&gt;]
+							#[span.text-danger &lt;page-item] #[span.text-success href=]#[span.text-warning "#"]#[span.text-danger &gt;]2#[span.text-danger &lt;/page-item&gt;]
+							#[span.text-danger &lt;page-item] #[span.text-success href=]#[span.text-warning "#"]#[span.text-danger &gt;]3#[span.text-danger &lt;/page-item&gt;]
+							#[span.text-danger &lt;page-item] #[span.text-success href=]#[span.text-warning "#"] #[span.text-success disabled]#[span.text-danger &gt;]4#[span.text-danger &lt;/page-item&gt;]
+						#[span.text-danger &lt;/paginacao&gt;]
+				//- section
+
+				hr.mt-20.mb20
+
+				section
+					h2.mb-4 V-Select
+
+					.form-group
+						v-select(id="exemple" name="example")
+							v-option(id="1" value="1") Option Exemple 1
+							v-option(id="2" value="2") Option Exemple 2
+							v-option(id="3" value="3") Option Exemple 3
+
+					pre.
+						<span class="text-danger">&lt;v-select</span>
+							<span class="text-success">id=</span><span class="text-warning">"exemple"</span>
+							<span class="text-success">name=</span><span class="text-warning">"example"</span>
+							<span class="text-success">placeholder=</span><span class="text-warning">"Escolha 1 opção"</span> <span class="text-muted">Texto que virá por padrão dentro do button, por default está como "Selecione"</span>
+						<span class="text-danger">&gt;</span>
+							<span class="text-muted">&lt;!-- O Atributo [disabled] desabilita o &lt;v-option&gt; --&gt;</span>
+							<span class="text-danger">&lt;v-option</span> <span class="text-success">id=</span><span   class="text-warning">"0"</span> <span class="text-success">value=</span><span class="text-warning">"0"</span><span class="text-success"> disabled</span><span class="text-danger">&gt;</span>Disabled<span class="text-danger">&lt;/v-option&gt;</span>
+							<span class="text-danger">&lt;v-option</span> <span class="text-success">id=</span><span   class="text-warning">"1"</span> <span class="text-success">value=</span><span class="text-warning">"1"</span><span class="text-danger">&gt;</span>Option 1<span class="text-danger">&lt;/v-option&gt;</span>
+							<span class="text-danger">&lt;v-option</span> <span class="text-success">id=</span><span   class="text-warning">"2"</span> <span class="text-success">value=</span><span class="text-warning">"2"</span><span class="text-danger">&gt;</span>Option 2<span class="text-danger">&lt;/v-option&gt;</span>
+						<span class="text-danger">&lt;/v-select&gt;</span>
+
+						Caso queira atualizar os itens desse #[span.text-danger &ltv-select&gt;] via Ajax:
+
+						<span class="text-danger">&lt;script&gt;</span>
+							<span class="text-primary">window</span>.$emit(<span class="text-warning">'vselect-refresh'</span>, {
+								id: <span class="text-warning">"exemple"</span>,<span class="text-muted"> // id do &lt;v-select&gt; alvo</span>
+								options: [
+									{id: <span class="text-warning">1</span>, value: <span class="text-warning">1</span>, text: <span class="text-warning">Option 1</span>},
+									{id: <span class="text-warning">2</span>, value: <span class="text-warning">2</span>, text: <span class="text-warning">Option 2</span>},
+									{id: <span class="text-warning">3</span>, value: <span class="text-warning">3</span>, text: <span class="text-warning">Option 3</span>},
+								]
+							});
+						<span class="text-danger">&lt;/script&gt;</span>
+				//- section
+
+				hr.mt-2.mb-2
+				section
+					h2 OWL CAROUSEL
+
+					pre.
+						&lt;owl-carousel id=&quot;owl&quot; autoplay :margin=&quot;30&quot; :md=&quot;3&quot; loop nav&gt;
+							&lt;div class=&quot;item&quot;&gt;1&lt;/div&gt;
+							&lt;div class=&quot;item&quot;&gt;2&lt;/div&gt;
+							&lt;div class=&quot;item&quot;&gt;3&lt;/div&gt;
+							&lt;div class=&quot;item&quot;&gt;4&lt;/div&gt;
+							&lt;div class=&quot;item&quot;&gt;5&lt;/div&gt;
+						&lt;/owl-carousel&gt;
+				//- section
+
+				section
+					h1 BS CAROUSEL <hr>
+					pre.
+						&lt;bs-carousel interval=&quot;6000&quot; id=&quot;banner&quot; slide indicators nav&gt;
+							&lt;div class=&quot;carousel-item active&quot;&gt;
+								&lt;img class=&quot;img-fluid&quot; src=&quot;https://picsum.photos/id/1008/1920/1080&quot; width=&quot;1920&quot; height=&quot;1080&quot; alt=&quot;Image&quot;&gt;
+							&lt;/div&gt;
+							&lt;div class=&quot;carousel-item&quot;&gt;
+								&lt;img class=&quot;img-fluid&quot; src=&quot;https://picsum.photos/id/1011/1920/1080&quot; width=&quot;1920&quot; height=&quot;1080&quot; alt=&quot;Image&quot;&gt;
+							&lt;/div&gt;
+						&lt;/bs-carousel&gt;
+				//- section
+			///main.wrapper
+		///#app
+
+		script(src="assets/js/jquery.min.js")
+		script(src="assets/js/bootstrap.min.js")
+		script(src="assets/js/scripts.min.js")
+	//- body

@@ -1,0 +1,127 @@
+.rodape__form{
+    width: 100%;
+    background: rgb(75,115,221);
+    background: linear-gradient(0deg, rgba(75,115,221,1) 7%, rgba(201,211,237,1) 100%);
+    padding-top: 100px;
+    margin-bottom: 100px;
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .title__rodape__form{
+            font-size: 57px;
+            color: #fff;
+            font-family: 'montserratbold',sans-serif;
+            margin-bottom: 45px;
+        }
+
+    }
+
+    form{
+        position: relative;
+    }
+    .form-control{
+        height: 55px;
+        width: 253px;
+        border-radius: 55px;
+        padding-left: 20px;
+        border: none;
+        box-shadow: none;
+
+        &::placeholder{
+            font-size: 14px;
+            color: #232323;
+            font-family: 'Questrial',sans-serif;
+        }
+    }
+
+    textarea{
+        height: 86px;
+        border-radius: 15px;
+        border: none;
+        box-shadow: none;
+        outline: none;
+        padding-top: 10px;
+        padding-left: 20px;
+
+        &::placeholder{
+            font-size: 14px;
+            color: #232323;
+            font-family: 'Questrial',sans-serif;
+        }
+    }
+
+    .pl{
+        padding-left: 0;
+    }
+    
+    .pr{
+        padding-right: 0;
+    }
+
+    .btn__enviar{
+        position: absolute;
+        top: 55%;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        color: map-get($cores, azul-inova );
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid map-get($cores, amarelo-inova );
+        transition: background .3s linear;
+        font-size: 20px;
+
+        &:hover{
+            background-color: map-get($cores, amarelo-inova );
+        }
+    }
+}
+
+@include media-breakpoint-down(lg){
+    .rodape__form{
+        .form-control{
+            width: 200px;
+        }
+    }
+}
+
+/****************************************************************
+                        MOBILE/TABLET
+*****************************************************************/
+@include media-breakpoint-down(md){
+    .rodape__form{
+
+        .container{
+            .title__rodape__form{
+                text-align: center;
+            }
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+
+        }
+
+
+        .pl{
+            padding-left: 15px;
+        }
+
+        .pr{
+            padding-right: 15px;
+        }
+
+        .btn__enviar{
+            top: 82% !important;
+            right: 10px;
+        }
+    }
+}

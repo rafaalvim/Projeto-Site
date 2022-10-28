@@ -1,0 +1,88 @@
+.banner{
+    
+    position: relative;
+
+    .carousel-indicators{
+        display: flex;
+        flex-direction: column;
+        top: 0;
+        padding-left: 80px;
+        
+        li{
+            width: 12px !important;
+            height: 12px !important;
+            border-radius: 12px;
+            border: none;
+            background: #fff;
+            margin-bottom:20px;
+            opacity: 1;
+        }
+
+        .active{
+            background: map-get($cores, amarelo-inova );
+        }
+
+        .box__redes__sociais__carousel{
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+            width: 20px;
+
+            a{
+                text-decoration: none;
+                color: #fff;
+                font-size: 20px;
+                transition: color .3s linear;
+
+                &:hover{
+                    color: map-get($cores, amarelo-inova );
+                }
+            }
+        }
+    }
+    
+    .carousel-item{
+        position: relative;
+
+        .btn__padrao{
+            position: absolute;
+            top: 65%;
+            right: 27%;
+            background: map-get($cores , amarelo-inova );
+            z-index: 997;
+            color: #232323;
+            transition: background .3s linear;
+            &:hover{
+                background: darken(map-get($cores , amarelo-inova ), 10%);
+            }
+        }
+    }
+}
+
+/**********************************************************************
+                            MOBILE/TABLET
+***********************************************************************/
+@include media-breakpoint-down(md){
+    .banner{
+        .btn__padrao{
+            display: none;
+            
+        }
+
+        .carousel-indicators{
+            flex-direction: row;
+            top: 80%;
+            padding: 0;
+            li{
+                margin-bottom:5px;
+                width: 10px !important;
+                height: 10px !important;
+                border-radius: 10px;
+            }
+
+            .box__redes__sociais__carousel{
+                display: none ;
+            }
+        }
+    }
+}

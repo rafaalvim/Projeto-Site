@@ -1,0 +1,90 @@
+@import 'box__conectando';
+
+.secao__sobre{
+    margin-top: 135px;
+    background-image: url("../images/bg-secao-sobre.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+    
+
+
+    .topo__secao__sobre{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .title__secao__sobre{
+            color: map-get($cores, azul-inova );
+            font-size: 57px;
+            line-height: 50px;
+            text-align: center;
+            font-family: 'montserratregular',sans-serif;
+            margin-bottom: 30px;
+
+            span{
+                font-family: 'montserratextrabold',sans-serif;
+            }
+        }
+
+        .descricao__secao__sobre{
+            font-size: 15px;
+            max-width: 830px;
+            text-align: center;
+            font-family: 'Questrial',sans-serif;
+        }
+    }
+
+    .box__principal__secao__sobre{
+        margin-top: 106px;
+
+        .box__sobre{
+            margin-top: 150px;
+
+            .title__sobre{
+                font-size: 30px;
+                color: map-get($cores, azul-inova );
+                font-family: 'montserratbold',sans-serif;
+                position: relative;
+                padding-top: 25px;
+                &::before{
+                    content: '';
+                    width: 40px;
+                    height: 10px;
+                    background: map-get($cores, azul-inova );
+                    position: absolute;
+                    top: 0;
+                }
+            }
+
+            .descricao__sobre{
+                font-size: 15px;
+                font-family: 'Questrial',sans-serif;
+                max-width: 442px;
+                margin-bottom: 70px;
+            }
+        }
+    }
+}
+
+/***********************************************************
+                        MOBILE/TABLET
+************************************************************/
+@include media-breakpoint-down(md){
+    .secao__sobre{
+        margin-top: 50px;
+        background-image: none;
+        .topo__secao__sobre{
+            .title__secao__sobre{
+                font-size: 40px;
+            }
+        }
+
+        .box__principal__secao__sobre{
+            margin-top: 0;
+
+            .box__sobre{
+                margin-top: 40px;
+            }
+        }
+    }
+}

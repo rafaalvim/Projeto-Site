@@ -1,0 +1,84 @@
+@import 'box__redes-sociais';
+@import 'rodape__form';
+
+.rodape{
+    background-color: map-get($cores, azul-inova );
+    padding-top:40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    .subtitulo__rodape{
+        font-size: 15px;
+        color: #fff;
+        font-family: 'poppinssemibold',sans-serif;
+        margin-top: 10px;
+    }
+
+    .box__contato{
+        display: flex;
+        color: #fff;
+        align-items: center;
+        font-family: 'Questrial',sans-serif;
+        font-size: 17px;
+
+        i{
+            margin-right: 10px;
+        }
+    }
+
+    .endereco{
+        color: #fff;
+        font-family: 'Questrial',sans-serif;
+        font-size: 17px;
+        margin-top: 10px;
+    }
+
+    .copyright{
+        font-size: 13px;
+        font-family: 'Questrial',sans-serif;
+        color: #fff;
+        a{
+            color: #fff;
+        }
+    }
+}
+
+.rodape--internas{
+    padding: 0;
+
+    .subtitulo__rodape{
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    
+    .box__contato{
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .endereco{
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .copyright{
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
+/**************************************************
+                        MOBILE/TABLET
+***************************************************/
+@include media-breakpoint-down(md){
+    .rodape{
+        .copyright{
+            a{
+                text-decoration: underline;
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+.btn__padrao{
+    width: 233px;
+    height: 57px;
+    border-radius: 57px;
+    background-color: map-get($cores, azul-inova );
+    color: #fff;
+    font-family: 'montserratbold';
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background .3s linear;
+
+    &:hover{
+        background-color: darken(map-get($cores, azul-inova), 10%);
+        color: #fff;
+    }
+}

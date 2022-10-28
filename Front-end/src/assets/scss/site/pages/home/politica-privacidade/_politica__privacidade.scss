@@ -1,0 +1,26 @@
+.politica__privacidade{
+    padding: 80px 0;
+    .container{
+        display: flex;
+        flex-direction: column;
+
+
+        .title__politica__privacidade{
+            text-align: left;
+            color: map-get($cores, azul-inova );
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .descricao__politica__privacidade{
+            text-align: justify;
+            font-size: 15px;
+            font-family: 'Questrial',sans-serif;
+        }
+
+        .btn__padrao{
+            align-self: center;
+            margin-top: 30px;
+        }
+    }
+}

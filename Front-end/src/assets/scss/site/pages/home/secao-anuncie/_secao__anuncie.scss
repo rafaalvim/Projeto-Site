@@ -1,0 +1,102 @@
+.secao__anuncie{
+    padding-top: 80px;
+    padding-bottom: 65px;
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .title__form{
+        color: map-get($cores, azul-inova );
+        font-family: 'montserratbold',sans-serif;
+        font-size: 57px;
+    }
+
+    .form__anuncie{
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+        position: relative;
+        .form-control{
+            border-radius: 55px;
+            padding-left: 20px;
+            border: none;
+            box-shadow: none;
+            background: #dfdfdf;
+            &::placeholder{
+                font-size: 14px;
+                color: #232323;
+                font-family: 'Questrial',sans-serif;
+            }
+    
+            
+        }
+    
+        input{
+            height: 55px;
+            width: 253px;
+        }
+    
+        textarea{
+            width: 100%;
+            height: 86px;
+            padding-top: 20px;
+            border-radius: 10px !important;
+        }
+
+        .btn__enviar{
+            position: absolute;
+            top: 52%;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            color: map-get($cores, azul-inova );
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid map-get($cores, amarelo-inova );
+            transition: background .3s linear;
+            font-size: 20px;
+    
+            &:hover{
+                background-color: map-get($cores, amarelo-inova );
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(lg){
+    .secao__anuncie{
+        .form__anuncie{
+            input{
+                max-width: 220px;
+            }
+        }
+    }
+}
+
+
+/****************************************************************
+                        MOBILE/TABLET
+*****************************************************************/
+@include media-breakpoint-down(md){
+    .secao__anuncie{
+        .title__form{
+            text-align: center;
+        }
+        .form__anuncie{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .btn__enviar{
+                top: 78% !important;
+                right: 30px;
+            }
+        }
+    }
+}

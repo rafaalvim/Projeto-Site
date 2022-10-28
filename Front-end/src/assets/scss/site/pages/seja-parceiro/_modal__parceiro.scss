@@ -1,0 +1,86 @@
+/* The Modal (background) */
+.modal2{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+}
+  
+/* Modal Content/Box */
+.modal2-content{
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    max-width: 874px; /* Could be more or less, depending on screen size */
+    height: 634px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+
+    .title__modal2{
+        color: map-get($cores, azul-inova );
+        font-size: 45px;
+        font-family: 'montserratextrabold',sans-serif;
+        text-align: center;
+    }
+
+    .discricao__modal2{
+        font-size: 23px;
+        text-align: center;
+        font-family: 'Questrial',sans-serif;
+        max-width: 659px;
+    }
+
+    .btn__padrao{
+        margin-top: 30px;
+        width: 293px;
+        height: 72px;
+        font-size: 15px;
+    }
+}
+  
+
+
+/* The Close Button */
+.close2{
+    color: #aaa;
+    font-size: 20px;
+    font-weight: bold;
+    align-self: flex-end;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: map-get($cores, azul-inova );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5px;
+
+}
+  
+.close2:hover,
+.close2:focus {
+    color: map-get($cores, amarelo-inova );
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/***********************************************************
+                        MOBILE/TABLET
+************************************************************/
+@include media-breakpoint-down(md){
+    .modal2{
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+}

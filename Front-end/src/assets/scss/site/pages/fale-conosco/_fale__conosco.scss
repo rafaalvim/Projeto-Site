@@ -1,0 +1,86 @@
+.fale__conosco{
+
+    .container{
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .descricao{
+        text-align: justify;
+        font-size: 15px;
+        font-family: 'Questrial',sans-serif;
+    }
+
+    .descricao--endereco__contato{
+        font-size: 17px;
+        margin-bottom: 5px;
+    }
+
+    .form__fale__conosco{
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+        .form-control{
+            border-radius: 55px;
+            padding-left: 20px;
+            border: none;
+            box-shadow: none;
+            background: #dfdfdf;
+            &::placeholder{
+                font-size: 14px;
+                color: #232323;
+                font-family: 'Questrial',sans-serif;
+            }
+    
+            
+        }
+    
+        input{
+            height: 55px;
+            width: 253px;
+        }
+    
+        textarea{
+            width: 100%;
+            height: 86px;
+            padding-top: 20px;
+            border-radius: 20px !important;
+        }
+    }
+}
+
+@include media-breakpoint-down(lg){
+    .fale__conosco{
+        .form__fale__conosco{
+            input{
+                max-width: 220px;
+            }
+        }
+    }
+}
+
+/********************************************************
+                        MOBILE/TABLET   
+*********************************************************/
+@include media-breakpoint-down(md){
+
+    .fale__conosco{
+        .row{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .box__img__fale__conosco{
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+    .form__fale__conosco{
+        padding-right: 15px;
+        padding-left: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -1,0 +1,118 @@
+.form__depoimentos{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    .form-control{
+        height: 55px;
+        width: 253px;
+        border-radius: 55px;
+        padding-left: 20px;
+        border: none;
+        box-shadow: none;
+        background: #dfdfdf;
+        &::placeholder{
+            font-size: 14px;
+            color: #232323;
+            font-family: 'Questrial',sans-serif;
+        }
+    }
+
+    .form__imagem{
+        background: #dfdfdf;
+        height: 55px;
+        border-radius: 55px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        padding-left: 15px;
+
+        label{
+            font-size: 14px;
+            color: #232323;
+            font-family: 'Questrial',sans-serif;
+        }
+        
+        input{
+            padding-left: 15px;
+            overflow: hidden;
+        }
+    }
+
+
+    textarea{
+        height: 86px;
+        border-radius: 20px;
+        border: none;
+        box-shadow: none;
+        outline: none;
+        padding-top: 10px;
+        padding-left: 20px;
+        background: #dfdfdf;
+
+        &::placeholder{
+            font-size: 14px;
+            color: #232323;
+            font-family: 'Questrial',sans-serif;
+        }
+    }
+
+    .pl{
+        padding-left: 0;
+    }
+    
+    .pr{
+        padding-right: 0;
+    }
+
+    .btn__padrao{
+        margin-top: 40px ;
+    }
+}
+
+@include media-breakpoint-down(lg){
+    .form__depoimentos{
+        .form-control{
+            max-width: 220px;
+        }
+    }
+}
+
+/********************************************************
+                        MOBILE/TABLET   
+*********************************************************/
+@include media-breakpoint-down(md){
+    .form__depoimentos{
+        padding-left: 15px;
+        padding-right: 15px;
+        justify-content: space-around;
+        display: flex;
+
+        .form-group{
+            max-width: 253px;
+        }
+
+        .pl{
+            padding-left: 15px;
+        }
+    
+        .pr{
+            padding-right: 15px;
+        }
+
+        .form__imagem{
+
+        }
+    }
+
+    
+}
+
+@include media-breakpoint-down(sm){
+    .form__depoimentos{
+        .form__imagem{
+            label{
+                font-size: 10px;
+            }
+        }
+    }
+}
